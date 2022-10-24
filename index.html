@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas HTML TABLE</title>
+    <style>
+        td{
+            padding: 15px;
+        }
+    </style>
+</head>
+<body align="center">
+    <script src="script.js"></script>
+
+    <h2>Belajar membuat tabel</h2>
+    <Table border="1" align="center">
+        <tr>
+            <td style="background-color: black; color:white;">Angka ke 1</td>
+            <td>Angka ke 2</td>
+            <td>Angka ke 3</td>
+            <td>Angka ke 4</td>
+        </tr>
+        <tr>
+            <td style="background-color: green; color:white;">Angka ke 5</td>
+            <td colspan="2" rowspan="2" style="background-color: green; color:white;">Angka ke 6,7,10,11</td>
+            <td style="background-color: green; color:white;">Angka ke 8</td>
+        </tr>
+        <tr>
+            <td>Angka ke 9</td>
+            <td>Angka ke 12</td>
+        </tr>
+        <tr>
+            <td>Angka ke 13</td>
+            <td>Angka ke 14</td>
+            <td>Angka ke 15</td>
+            <td style="background-color: red; color:white;">Angka ke 16</td>
+        </tr>
+    </Table>
+    <h2 id="hasil"></h2>
+
+    <script>
+        let nilai = prompt("Masukan Angka 1 - 100");
+
+        if (nilai < 0 ) {
+            alert("Harap Masukan Angka 1 - 100 !!!!");
+        } else if (nilai <= 30){
+            document.getElementById("hasil").innerHTML = "Nilai anda D"
+        } else if (nilai <= 60){
+            document.getElementById("hasil").innerHTML = "Nilai anda C"
+        } else if (nilai <= 80){
+            document.getElementById("hasil").innerHTML = "Nilai anda B"
+        } else if (nilai <= 100){
+            document.getElementById("hasil").innerHTML = "Nilai anda A"
+        } else{
+            document.getElementById("hasil").innerHTML = "INVALID"
+        }
+    </script>
+</body>
+</html>
